@@ -1,0 +1,30 @@
+.wrapper {
+  margin: 4vw;
+  display: grid;
+  grid-template-columns: 250px 400px;
+  grid-template-rows: 250px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 15px 0 0 15px;
+}
+
+.info {
+  color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0 15px 15px 0;
+  padding-left: 2vw;
+}
+
+.info > p > b {
+  font-weight: 700;
+}
+
+.header {
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.text {
+}
