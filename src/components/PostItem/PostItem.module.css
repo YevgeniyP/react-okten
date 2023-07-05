@@ -1,0 +1,22 @@
+.wrapper {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 1);
+  padding: 3vh 2vw;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 180%;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+}
