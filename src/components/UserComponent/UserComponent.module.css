@@ -1,0 +1,14 @@
+.wrapper {
+  margin: 2vh 3vw;
+  display: grid;
+  grid-auto-columns: 1fr;
+  row-gap: 5vh;
+}
+
+.header {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 900;
+  line-height: 220%;
+  text-shadow: 3px 3px 3px darkgray;
+}
