@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 1vh 1vw;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.wrapper > img {
+  width: 100%;
+}
