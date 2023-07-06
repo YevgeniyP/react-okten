@@ -9,7 +9,7 @@ function LaunchComponent() {
     fetch("https://api.spacexdata.com/v3/launches/")
       .then((response) => response.json())
       .then((launches) =>
-        setLaunches(launches.filter((launch) => launch.launch_year < 2020))
+        setLaunches(launches.filter((launch) => launch.launch_year !== "2020"))
       );
   }, []);
 
