@@ -1,9 +1,9 @@
-import UsersComponent from "./components/UserComponent/UsersComponent";
+import UserComponent from "./components/UserComponent/UserComponent";
 
 const App = () => {
   return (
     <div className="App">
-      <UsersComponent />
+      <UserComponent />
     </div>
   );
 };
