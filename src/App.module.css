@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 3vh 4vw;
+  width: 100vw;
+  display: grid;
+  column-gap: 2vw;
+  row-gap: 2vh;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.header {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 230%;
+  text-align: center;
+  text-shadow: 5px 5px 8px darkgray;
+}
