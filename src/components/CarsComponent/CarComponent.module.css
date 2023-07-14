@@ -1,0 +1,17 @@
+.wrapper {
+  width: 90vw;
+  display: grid;
+  gap: 5vh;
+  justify-content: center;
+}
+
+.wrapperCar {
+  display: grid;
+  gap: 3vh;
+}
+
+.header {
+  text-align: center;
+  line-height: 220%;
+  font-size: 36px;
+}

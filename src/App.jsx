@@ -1,7 +1,8 @@
 import React from "react";
+import { CarsComponent } from "./components/CarsComponent/CarsComponent";
 
-function App() {
-  return <div></div>;
-}
+const App = () => {
+  return <CarsComponent />;
+};
 
-export default App;
+export { App };
