@@ -1,0 +1,36 @@
+.header {
+  font-size: 36px;
+  line-height: 220%;
+  font-weight: 900;
+  text-align: center;
+}
+
+.formWrapper {
+  display: grid;
+  grid-template-columns: 40vw;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5vh 2vw;
+  gap: 5vh;
+}
+
+.formInput {
+  display: block;
+  width: 100%;
+  padding: 1vh 2vw;
+}
+
+.formBtn {
+  margin: 2vh 2vw;
+  padding: 1vh 2vw;
+}
+
+.fromMessage {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  background: #aad9aa;
+  line-height: 260%;
+  color: green;
+  border: 1px solid green;
+}
