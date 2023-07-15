@@ -1,6 +1,6 @@
 import React from "react";
 
-function PostItem({ post }) {
+const PostItem = ({ post }) => {
   const { title, body } = post;
   return (
     <div>
@@ -8,6 +8,6 @@ function PostItem({ post }) {
       <p>{body}</p>
     </div>
   );
-}
+};
 
-export default PostItem;
+export { PostItem };

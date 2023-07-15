@@ -1,25 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { UserItem } from "../UserItem/UserItem";
 
-function UserComponent({ user, selectId }) {
-  const { id, name, email, website, phone } = user;
+const UserComponent = ({ setSelectedUser }) => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((users) => setUsers(users));
+  }, []);
+
   return (
     <div>
-      <h2>{name}</h2>
-      <p>
-        <b>Email: </b>
-        {email}
-      </p>
-      <p>
-        <b>Website: </b>
-        {website}
-      </p>
-      <p>
-        <b>Phone: </b>
-        {phone}
-      </p>
-      <button onClick={() => selectId(id)}>Show Posts</button>
+      {users.map((user) => (
+        <UserItem key={user.id} user={user} setSelectedUser={setSelectedUser} />
+      ))}
     </div>
   );
-}
+};
 
-export default UserComponent;
+export { UserComponent };

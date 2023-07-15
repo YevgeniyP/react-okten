@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import PostItem from "../PostItem/PostItem";
+import { PostItem } from "../PostItem/PostItem";
 
-function PostComponent({ userId }) {
-  console.log(userId);
+const PostComponent = ({ selectedUser }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+    fetch(`https://jsonplaceholder.typicode.com/users/${selectedUser}/posts`)
       .then((response) => response.json())
       .then((posts) => setPosts(posts));
-  }, [userId]);
+  }, [selectedUser]);
 
   return (
     <div>
@@ -19,6 +18,6 @@ function PostComponent({ userId }) {
       ))}
     </div>
   );
-}
+};
 
-export default PostComponent;
+export { PostComponent };
