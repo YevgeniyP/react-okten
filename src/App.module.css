@@ -1,7 +1,7 @@
 .wrapper {
-  width: 100vw;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 3vh;
-  padding: 5vh 3vw;
+  grid-template-columns: 55vw 35vw;
+  align-items: start;
+  column-gap: 3vw;
+  padding: 5vh 1vw;
 }

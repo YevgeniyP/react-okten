@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
-import PostComponent from "./PostComponent/PostComponent";
+import React, { createContext, useState } from "react";
+import { CommentForm } from "./components/CommentForm/CommentForm";
+import { Posts } from "./components/Posts/Posts";
 import styles from "./App.module.css";
 
-function App() {
-  const [posts, setPosts] = useState([]);
+const AppContext = createContext(null);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((posts) => setPosts(posts));
-  }, []);
+const App = () => {
+  const [isSending, setIsSending] = useState(false);
+  const [selectedPost, setSelectedPost] = useState(null);
+
   return (
     <div className={styles.wrapper}>
-      {posts.map((post) => (
-        <PostComponent key={post.id} post={post} />
-      ))}
+      <AppContext.Provider
+        value={{ isSending, setIsSending, selectedPost, setSelectedPost }}
+      >
+        <Posts />
+        <CommentForm />
+      </AppContext.Provider>
     </div>
   );
-}
+};
 
-export default App;
+export { App, AppContext };
