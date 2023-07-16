@@ -1,7 +1,11 @@
 import React from "react";
 
-function SubChild21() {
-  return <div>SubChild21</div>;
-}
+const SubChild21 = () => {
+  return (
+    <div>
+      <h3>SubChild21</h3>
+    </div>
+  );
+};
 
-export default SubChild21;
+export { SubChild21 };

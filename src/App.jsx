@@ -1,18 +1,20 @@
-import React, { createContext } from "react";
-import Child1Component from "./components/Child1/Child1Component";
-import Child2Component from "./components/Child2/Child2Component";
+import React, { createContext, useState } from "react";
+import { Child1Component } from "./components/Child1/Child1Component";
+import { Child2Component } from "./components/Child2/Child2Component";
+import styles from "./App.module.css";
 
-export const AppContext = createContext(null);
+const AppContext = createContext(null);
 
-function App() {
+const App = () => {
+  const [counter, setCounter] = useState(0);
   return (
-    <div>
-      <AppContext.Provider value={"light"}>
+    <div className={styles.wrapper}>
+      <AppContext.Provider value={{ counter, setCounter }}>
         <Child1Component />
         <Child2Component />
       </AppContext.Provider>
     </div>
   );
-}
+};
 
-export default App;
+export { App, AppContext };

@@ -1,15 +1,11 @@
-import React, { useContext } from "react";
-import { AppContext } from "../../App";
+import React from "react";
 
-function SubChild12() {
-  const theme = useContext(AppContext);
-
+const SubChild12 = () => {
   return (
     <div>
-      SubChild12
-      <h2>Theme: {theme}</h2>
+      <h3>SubChild12</h3>
     </div>
   );
-}
+};
 
-export default SubChild12;
+export { SubChild12 };

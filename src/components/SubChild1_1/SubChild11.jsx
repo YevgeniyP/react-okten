@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../App";
 
-function SubChild11() {
-  return <div>SubChild11</div>;
-}
+const SubChild11 = () => {
+  const { counter } = useContext(AppContext);
+  return (
+    <div>
+      <h3>SubChild11</h3>
+      <p>Counter: {counter}</p>
+    </div>
+  );
+};
 
-export default SubChild11;
+export { SubChild11 };
