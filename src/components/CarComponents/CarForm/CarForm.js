@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form";
 
+import styles from "./CarForm.module.css";
+
 const CarForm = ({ setTrigger, updateCar, setUpdateCar }) => {
-  const { register, handleSubmit, reset, setValue } = useForm();
+  const { register, handleSubmit, reset, setValue, setFocus } = useForm();
 
   if (updateCar) {
     setValue("brand", updateCar.brand);
     setValue("price", updateCar.price);
     setValue("year", updateCar.year);
+    setFocus("brand");
   }
 
   const create = (data) => {
@@ -41,13 +44,46 @@ const CarForm = ({ setTrigger, updateCar, setUpdateCar }) => {
   };
 
   return (
-    <div>
-      <h2>{updateCar ? "Update car" : "Create new car"}</h2>
-      <form onSubmit={handleSubmit(updateCar ? update : create)}>
-        <input type="text" placeholder={"Brand"} {...register("brand")} />
-        <input type="text" placeholder={"Price"} {...register("price")} />
-        <input type="text" placeholder={"Year"} {...register("year")} />
-        <input type="submit" value={updateCar ? "Update" : "Submit"} />
+    <div className={styles.wrapper}>
+      <h2 className={styles.header}>
+        {updateCar ? "Update car" : "Create new car"}
+      </h2>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(updateCar ? update : create)}
+      >
+        <input
+          type="text"
+          placeholder={"Brand"}
+          className={`${styles.formInput} ${styles.brand}`}
+          {...register("brand")}
+        />
+        <input
+          type="text"
+          placeholder={"Price"}
+          className={`${styles.formInput} ${styles.price}`}
+          {...register("price")}
+        />
+        <input
+          type="text"
+          placeholder={"Year"}
+          className={`${styles.formInput} ${styles.year}`}
+          {...register("year")}
+        />
+        <input
+          type="submit"
+          className={`${styles.formButton} ${styles.sendBtb}`}
+          value={updateCar ? "Update" : "Submit"}
+        />
+        <input
+          type="button"
+          className={`${styles.formButton} ${styles.resetBtn}`}
+          value={"Reset"}
+          onClick={() => {
+            reset();
+            setUpdateCar(null);
+          }}
+        />
       </form>
     </div>
   );

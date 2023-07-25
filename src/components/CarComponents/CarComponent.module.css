@@ -1,0 +1,7 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 80vw;
+  justify-content: center;
+  row-gap: 5vh;
+  margin: 5vh 0;
+}

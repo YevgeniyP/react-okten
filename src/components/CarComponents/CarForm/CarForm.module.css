@@ -1,0 +1,55 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+.header {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px lightgray;
+  color: teal;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 15vw);
+  grid-template-areas: "brand brand" "price price" "year year" "sendBtb resetBtn";
+  gap: 3vh;
+}
+
+.formInput {
+  padding: 1vh 1vw;
+  border: 2px solid teal;
+  border-radius: 10px;
+}
+
+.formButton {
+  padding: 1vh 1vw;
+  border: 2px solid teal;
+  border-radius: 10px;
+  background: teal;
+  color: aliceblue;
+  font-size: 16px;
+}
+
+.brand {
+  grid-area: brand;
+}
+
+.price {
+  grid-area: price;
+}
+
+.year {
+  grid-area: year;
+}
+
+.sendBtb {
+  grid-area: sendBtb;
+}
+
+.resetBtn {
+  grid-area: resetBtn;
+}

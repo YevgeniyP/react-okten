@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import { Car } from "../Car/Car";
 
+import styles from "./Cars.module.css";
+
 const Cars = ({ trigger, setTrigger, setUpdateCar }) => {
   const [cars, setCars] = useState([]);
 
@@ -12,7 +14,8 @@ const Cars = ({ trigger, setTrigger, setUpdateCar }) => {
   }, [trigger]);
 
   return (
-    <div>
+    <div className={styles.wrapper}>
+      <h2 className={styles.header}>Car list</h2>
       {cars.map((car) => (
         <Car
           key={car.id}

@@ -1,0 +1,19 @@
+.wrapper {
+}
+
+.wrapper > p {
+  font-size: 18px;
+}
+
+.wrapper > p > span {
+  font-weight: 700;
+}
+
+.wrapper > input {
+  padding: 1vh 1vw;
+  border: 2px solid teal;
+  border-radius: 10px;
+  background: teal;
+  color: aliceblue;
+  font-size: 16px;
+}

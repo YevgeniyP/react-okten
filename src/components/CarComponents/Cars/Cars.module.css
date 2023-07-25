@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 60vw;
+  justify-content: center;
+  row-gap: 3vh;
+}
+
+.header {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px lightgray;
+  color: teal;
+}

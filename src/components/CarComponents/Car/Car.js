@@ -1,3 +1,5 @@
+import styles from "./Car.module.css";
+
 const Car = ({ car, setTrigger, setUpdateCar }) => {
   const { id, brand, price, year } = car;
 
@@ -15,14 +17,21 @@ const Car = ({ car, setTrigger, setUpdateCar }) => {
   };
 
   return (
-    <div>
-      <p>id: {id}</p>
-      <p>brand: {brand}</p>
-      <p>price: {price}</p>
-      <p>year: {year}</p>
+    <div className={styles.wrapper}>
+      <p>
+        <span>id</span>: {id}
+      </p>
+      <p>
+        <span>brand</span>: {brand}
+      </p>
+      <p>
+        <span>price</span>: {price}
+      </p>
+      <p>
+        <span>year</span>: {year}
+      </p>
       <input type="button" value={"Update"} onClick={() => setUpdateCar(car)} />
       <input type="button" value={"Delete"} onClick={() => remove()} />
-      <hr />
     </div>
   );
 };
