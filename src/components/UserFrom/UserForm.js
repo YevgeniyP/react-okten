@@ -1,37 +1,34 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState } from "react";
+
 import styles from "./UserForm.module.css";
 
 const UserForm = () => {
   const [createStatus, setCreateStatus] = useState(false);
+  const [username, setUsername] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isValid },
-  } = useForm();
-
-  const createUser = (data) => {
+  const createUser = (e) => {
+    e.preventDefault();
     fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
     })
       .then((response) => response.json())
+      .then((user) => console.log(user))
       .then(() => setCreateStatus(() => true));
-  };
-
-  const onSubmit = (data) => {
-    createUser(data);
-    reset();
   };
 
   return (
     <div>
       <h2 className={styles.header}>Create user</h2>
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={createUser}
         onChange={() => setCreateStatus(false)}
         className={styles.formWrapper}
       >
@@ -39,30 +36,21 @@ const UserForm = () => {
           className={styles.formInput}
           type="text"
           placeholder={"Username"}
-          {...register("username", {
-            required: true,
-            min: 5,
-            max: 30,
-          })}
+          onChange={(e) => setUsername(e.target.value)}
         />
         <input
           className={styles.formInput}
           type="email"
           placeholder={"Email"}
-          {...register("email", { required: true })}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           className={styles.formInput}
           type="password"
           placeholder={"Password"}
-          {...register("password", { required: true })}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <input
-          className={styles.formBtn}
-          type="submit"
-          value={"Submit"}
-          disabled={!isValid}
-        />
+        <input className={styles.formBtn} type="submit" value={"Submit"} />
         {createStatus && <div className={styles.fromMessage}>User created</div>}
       </form>
     </div>
