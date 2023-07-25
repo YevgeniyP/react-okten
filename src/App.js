@@ -3,7 +3,6 @@ import { Posts } from "./components/Posts/Posts";
 import { useState } from "react";
 
 const App = () => {
-  const [trigger, setTrigger] = useState(false);
   const [commentedPost, setCommentedPost] = useState(null);
 
   return (
