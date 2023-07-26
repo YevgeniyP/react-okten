@@ -1,3 +1,10 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  display: grid;
+  grid-template-columns: 90vw;
+  grid-auto-columns: 90vw;
+  justify-content: center;
+}
