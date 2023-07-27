@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 90vw;
+  justify-content: center;
+  gap: 5vh;
+}

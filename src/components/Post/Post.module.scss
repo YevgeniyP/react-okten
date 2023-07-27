@@ -1,0 +1,20 @@
+.Post {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 2vh;
+  border: 2px solid teal;
+  border-radius: 10px;
+
+  h3 {
+    text-transform: uppercase;
+    border-bottom: 2px solid teal;
+  }
+
+  input[type="button"] {
+    background: teal;
+    padding: 10px 10px;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+  }
+}

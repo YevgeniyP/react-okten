@@ -1,0 +1,35 @@
+.CommentForm {
+  display: grid;
+  grid-template-columns: 40vw;
+  justify-content: center;
+  gap: 2vh;
+
+  h2 {
+    text-align: center;
+    line-height: 160%;
+    color: teal;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 2vh;
+
+    input[type="text"] {
+      border: none;
+      border-bottom: 3px solid teal;
+      line-height: 180%;
+      padding: 5px 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background: teal;
+      padding: 10px 10px;
+      color: aliceblue;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+}
