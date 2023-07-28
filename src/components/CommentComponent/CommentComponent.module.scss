@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 3vh;
+
+  div {
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 1vw;
+    cursor: pointer;
+  }
+}
