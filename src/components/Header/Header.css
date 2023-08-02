@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  background: rgba(255, 165, 0, 0.6);
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  text-align: center;
+}
+
+.menu > li > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px gray;
+}
+
+.menu > li > a:hover {
+  color: deepskyblue;
+}
+
+.menu > li > a[class="active"] {
+  color: cornflowerblue;
+}
