@@ -1,0 +1,10 @@
+.Header {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  color: snow;
+  background: teal;
+  text-shadow: 0 0 1rem blue;
+}

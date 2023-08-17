@@ -1,0 +1,15 @@
+.CharacterItem {
+  padding: 0.8rem 1.3rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 6px teal;
+}
+
+input[type="button"] {
+  background: snow;
+  color: teal;
+  border-radius: 2rem;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  box-shadow: 0 0 4px teal;
+  font-size: 18px;
+}

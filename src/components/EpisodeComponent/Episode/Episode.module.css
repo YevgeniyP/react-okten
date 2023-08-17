@@ -1,0 +1,10 @@
+.Episode {
+  border: 1px solid blue;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px teal;
+  padding: 0.5rem 1rem;
+}
+
+.Episode:hover {
+  background: lightgray;
+}

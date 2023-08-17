@@ -1,0 +1,7 @@
+.CharacterList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+  gap: 1rem;
+  justify-items: center;
+}
