@@ -10,6 +10,7 @@ import { characterService } from "../../services/characterService";
 const initialState = {
   isLoading: false,
   characters: [],
+  header: "",
 };
 
 //
@@ -25,7 +26,11 @@ const getList = createAsyncThunk("characterSlice/getList", async ({ id }) => {
 const characterSlice = createSlice({
   name: "characterSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    setEpisodeName: (state, action) => {
+      state.header = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getList.fulfilled, (state, action) => {
@@ -39,9 +44,14 @@ const characterSlice = createSlice({
       });
   },
 });
+const {
+  reducer,
+  actions: { setEpisodeName },
+} = characterSlice;
 
-export const characterReducer = characterSlice.reducer;
+export const characterReducer = reducer;
 
 export const characterAction = {
   getList,
+  setEpisodeName,
 };
