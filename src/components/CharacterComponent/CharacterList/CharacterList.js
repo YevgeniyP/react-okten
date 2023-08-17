@@ -9,7 +9,7 @@ export const CharacterList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { characters, header } = useSelector((state) => state.characters);
+  const { characters } = useSelector((state) => state.characters);
 
   return (
     <div>
